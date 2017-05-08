@@ -1,0 +1,15 @@
+<div class="content" chrome-context >
+
+
+  <div class="app-wrapper" ng-class="{ 'hidden-chrome': !chrome.getVisible() }">
+    <div class="app-wrapper-panel">
+      <kbn-notifications list="notifList"></kbn-notifications>
+      <kbn-loading-indicator></kbn-loading-indicator>
+      <div
+        class="application"
+        ng-class="'tab-' + chrome.getFirstPathSegment() + ' ' + chrome.getApplicationClasses()"
+        ng-view
+      ></div>
+    </div>
+  </div>
+</div>
