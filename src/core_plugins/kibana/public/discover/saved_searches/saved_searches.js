@@ -21,7 +21,7 @@ module.service('savedSearches', function (Promise, config, kbnIndex, esAdmin, cr
   savedSearchLoader.loaderProperties = {
     name: 'searches',
     noun: 'Saved Search',
-    nouns: 'saved searches'
+    nouns: '已保存的搜索'
   };
   savedSearchLoader.urlFor = function (id) {
     return kbnUrl.eval('#/discover/{{id}}', { id: id });
