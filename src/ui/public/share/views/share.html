@@ -145,7 +145,7 @@
       <!-- Header -->
       <div class="kuiLocalDropdownHeader">
         <div class="kuiLocalDropdownHeader__label">
-          Link
+          链接
         </div>
         <div class="kuiLocalDropdownHeader__actions">
           <a
@@ -154,7 +154,7 @@
             ng-if="!share.urlFlags.shortSnapshot"
             ng-click="share.toggleShortSnapshotUrl()"
           >
-            Short URL
+            短链接
           </a>
 
           <a
@@ -162,7 +162,7 @@
             ng-if="share.urlFlags.shortSnapshot"
             ng-click="share.toggleShortSnapshotUrl()"
           >
-            Long URL
+            长链接
           </a>
 
           <a
@@ -170,7 +170,7 @@
             class="kuiLocalDropdownHeader__action"
             ng-click="share.copyToClipboard('#snapshotUrl')"
           >
-            Copy
+            复制
           </a>
         </div>
       </div>

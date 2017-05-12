@@ -22,14 +22,14 @@ uiModules.get('apps/management')
       const rowScopes = []; // track row scopes, so they can be destroyed as needed
       $scope.perPage = 25;
       $scope.columns = [
-        { title: 'name' },
-        { title: 'type' },
-        { title: 'format' },
-        { title: 'searchable', info: 'These fields can be used in the filter bar' },
-        { title: 'aggregatable' , info: 'These fields can be used in visualization aggregations' },
-        { title: 'analyzed', info: 'Analyzed fields may require extra memory to visualize' },
-        { title: 'excluded', info: 'Fields that are excluded from _source when it is fetched' },
-        { title: 'controls', sortable: false }
+        { title: '名称' },
+        { title: '类型' },
+        { title: '格式' },
+        { title: '可搜索', info: 'These fields can be used in the filter bar' },
+        { title: '聚合' , info: 'These fields can be used in visualization aggregations' },
+        { title: '分析', info: 'Analyzed fields may require extra memory to visualize' },
+        { title: '排除', info: 'Fields that are excluded from _source when it is fetched' },
+        { title: '控件', sortable: false }
       ];
 
       $scope.$watchMulti(['[]indexPattern.fields', 'fieldFilter'], refreshRows);

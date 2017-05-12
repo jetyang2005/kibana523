@@ -10,7 +10,7 @@ const app = uiModules.get('app/visualize');
 // edited by the object editor.
 require('plugins/kibana/management/saved_object_registry').register({
   service: 'savedVisualizations',
-  title: 'visualizations'
+  title: '可视化'
 });
 
 app.service('savedVisualizations', function (Promise, esAdmin, kbnIndex, SavedVis, Private, Notifier, kbnUrl) {

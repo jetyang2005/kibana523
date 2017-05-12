@@ -14,17 +14,17 @@ export default function GetFieldTypes() {
 
     return [
       {
-        title: 'fields',
+        title: '领域',
         index: 'indexedFields',
         count: fieldCount.indexed
       },
       {
-        title: 'scripted fields',
+        title: '脚本领域',
         index: 'scriptedFields',
         count: fieldCount.scripted
       },
       {
-        title: 'source filters',
+        title: '源筛选器',
         index: 'sourceFilters',
         count: fieldCount.sourceFilters
       }

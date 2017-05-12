@@ -11,7 +11,7 @@
             <i aria-label="Reload Saved Search" tooltip="Reload Saved Search" ng-click="resetQuery();" class="fa fa-undo small"></i>&nbsp;
           </span>
           <span data-test-subj="discoverQueryHits" class="kuiLocalBreadcrumb__emphasis">{{(hits || 0) | number:0}}</span>
-          <ng-pluralize count="hits" when="{'1':'hit', 'other':'点击量'}"></ng-pluralize>
+          <ng-pluralize count="hits" when="{'1':'hit', 'other':'点击'}"></ng-pluralize>
         </div>
       </div>
 
@@ -76,7 +76,7 @@
           <!-- loading -->
           <div ng-show="resultState === 'loading'">
             <div class="discover-overlay">
-              <h2>Searching</h2>
+              <h2>搜索</h2>
               <div ng-show="fetchStatus">{{fetchStatus.complete}}/{{fetchStatus.total}}</div>
             </div>
           </div>
@@ -133,7 +133,7 @@
                 <center>
                   These are the first {{opts.sampleSize}} documents matching
                   your search, refine your search to see others.
-                  <a ng-click="toTop()" title="Back to top">Back to top.</a>
+                  <a ng-click="toTop()" title="Back to top">回到顶部.</a>
                 </center>
               </div>
             </div>

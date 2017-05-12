@@ -14,7 +14,7 @@
           ng-click="exportAll()"
         >
           <span aria-hidden="true" class="kuiButton__icon kuiIcon fa-download"></span>
-          Export Everything
+          导出所有
         </button>
 
         <file-upload
@@ -26,7 +26,7 @@
             data-import-saved-objects-button
           >
             <span aria-hidden="true" class="kuiButton__icon kuiIcon fa-upload"></span>
-            Import
+            导入
           </button>
         </file-upload>
       </div>
@@ -97,7 +97,7 @@
             ng-disabled="selectedItems.length == 0"
           >
             <span aria-hidden="true" class="kuiButton__icon kuiIcon fa-download"></span>
-            出口
+            导出
           </button>
         </div>
 
@@ -109,7 +109,7 @@
       <!-- NoResults -->
       <div class="kuiPanel kuiPanel--centered" ng-if="!service.data.length">
         <div class="kuiNoItems">
-          No {{service.title}} matched your search.
+          没有 {{service.title}} 匹配的搜索.
         </div>
       </div>
 
