@@ -216,7 +216,6 @@ uiModules.get('apps/management')
 
       // TODO: Migrate all scope methods to the controller.
       $scope.changeTab = function (tab) {
-        console.log("tab======"+JSON.stringify(tab));
         $scope.currentTab = tab;
         $scope.selectedItems.length = 0;
         $state.tab = tab.title;
