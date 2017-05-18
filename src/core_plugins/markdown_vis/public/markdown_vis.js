@@ -17,7 +17,7 @@ function MarkdownVisProvider(Private) {
   // Vis object of this type.
   return new TemplateVisType({
     name: 'markdown',
-    title: 'Markdown widget',
+    title: 'Markdown小部件',
     icon: 'fa-code',
     description: 'Useful for displaying explanations or instructions for dashboards.',
     template: markdownVisTemplate,

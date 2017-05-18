@@ -8,7 +8,7 @@ export default function HistogramVisType(Private) {
 
   return new VislibVisType({
     name: 'area',
-    title: 'Area chart',
+    title: '区域图',
     icon: 'fa-area-chart',
     description: 'Great for stacked timelines in which the total of all series is more important ' +
       'than comparing any two or more series. Less useful for assessing the relative change of ' +

@@ -29,7 +29,7 @@ function TableVisTypeProvider(Private) {
   // Vis object of this type.
   return new TemplateVisType({
     name: 'table',
-    title: 'Data table',
+    title: '数据表',
     icon: 'fa-table',
     description: 'The data table provides a detailed breakdown, in tabular format, of the results of a composed ' +
       'aggregation. Tip, a data table is available from many other charts by clicking the grey bar at the bottom of the chart.',
@@ -56,7 +56,7 @@ function TableVisTypeProvider(Private) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Metric',
+        title: '度量',
         min: 1,
         defaults: [
           { type: 'count', schema: 'metric' }

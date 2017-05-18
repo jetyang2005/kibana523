@@ -8,7 +8,7 @@ export default function HistogramVisType(Private) {
 
   return new VislibVisType({
     name: 'line',
-    title: 'Line chart',
+    title: '折线图',
     icon: 'fa-line-chart',
     description: 'Often the best chart for high density time series. Great for comparing one series to another. ' +
       'Be careful with sparse sets as the connection between points can be misleading.',

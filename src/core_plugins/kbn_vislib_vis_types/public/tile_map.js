@@ -13,7 +13,7 @@ export default function TileMapVisType(Private, getAppState, courier, config) {
 
   return new MapsVisType({
     name: 'tile_map',
-    title: 'Tile map',
+    title: '瓷砖地图',
     icon: 'fa-map-marker',
     description: 'Your source for geographic maps. Requires an elasticsearch geo_point field. More specifically, a field ' +
      'that is mapped as type:geo_point with latitude and longitude coordinates.',

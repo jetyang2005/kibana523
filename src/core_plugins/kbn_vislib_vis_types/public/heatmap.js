@@ -9,7 +9,7 @@ export default function HeatmapVisType(Private) {
 
   return new VislibVisType({
     name: 'heatmap',
-    title: 'Heatmap chart',
+    title: '热图表',
     icon: 'fa-barcode',
     description: 'A heat map is a graphical representation of data' +
     ' where the individual values contained in a matrix are represented as colors. ',

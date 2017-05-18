@@ -19,7 +19,7 @@ function MetricVisProvider(Private) {
   // Vis object of this type.
   return new TemplateVisType({
     name: 'metric',
-    title: 'Metric',
+    title: '度量',
     description: 'One big number for all of your one big number needs. Perfect for showing ' +
       'a count of hits, or the exact average of a numeric field.',
     icon: 'fa-calculator',
