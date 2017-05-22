@@ -1,9 +1,9 @@
-<div class="kuiLocalDropdownTitle">Settings</div>
+<div class="kuiLocalDropdownTitle">设置</div>
 
 <form class="form" name="settingsForm" ng-submit="settingsForm.$valid && settings.apply()">
   <div class="form-group">
     <div class="kuiLocalDropdownHeader">
-      <div class="kuiLocalDropdownHeader__label">Font Size</div>
+      <div class="kuiLocalDropdownHeader__label">字体大小</div>
     </div>
 
     <div>
@@ -20,7 +20,7 @@
 
     <div class="checkbox">
       <label>
-        <input type="checkbox" ng-model="settings.vals.wrapMode"/> Wrap long lines
+        <input type="checkbox" ng-model="settings.vals.wrapMode"/> 用长线条
       </label>
     </div>
 
@@ -28,7 +28,7 @@
 
   <div class="form-group">
     <div class="kuiLocalDropdownHeader">
-      <div class="kuiLocalDropdownHeader__label">Autocomplete</div>
+      <div class="kuiLocalDropdownHeader__label">自动完成</div>
     </div>
 
     <div class="checkbox">
@@ -37,7 +37,7 @@
           name="autocompleteFields"
           type="checkbox"
           ng-model="settings.vals.autocomplete.fields">
-          Fields
+        领域
         </input>
       </label>
     </div>
@@ -48,7 +48,7 @@
           name="autocompleteIndices"
           type="checkbox"
           ng-model="settings.vals.autocomplete.indices">
-          Indices &amp; Aliases
+          索引 &amp; 别名
         </input>
       </label>
     </div>
@@ -59,14 +59,14 @@
     <button
       ng-click="kbnTopNav.close()"
       class="btn btn-default">
-      Cancel
+      取消
     </button>
     <button
       type="submit"
       ng-disabled="settingsForm.$invalid"
       class="btn btn-primary"
       data-test-subj="settings-save-button">
-      Save
+      保存
     </button>
   </div>
 </form>

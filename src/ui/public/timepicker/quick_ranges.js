@@ -18,7 +18,7 @@ module.constant('quickRanges', [
   { from: 'now-1M/M', to: 'now-1M/M', display: 'Previous month',        section: 1 },
   { from: 'now-1y/y', to: 'now-1y/y', display: 'Previous year',         section: 1 },
 
-  { from: 'now-15m',  to: 'now',      display: 'Last 15 minutes',       section: 2 },
+  { from: 'now-15m',  to: 'now',      display: '最后 15 分钟',       section: 2 },
   { from: 'now-30m',  to: 'now',      display: 'Last 30 minutes',       section: 2 },
   { from: 'now-1h',   to: 'now',      display: 'Last 1 hour',           section: 2 },
   { from: 'now-4h',   to: 'now',      display: 'Last 4 hours',          section: 2 },

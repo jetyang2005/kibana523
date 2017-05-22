@@ -1,7 +1,7 @@
 <div ng-show="section === 'tutorial'">
   <div ng-show="page === 1">
     <div class="doc-container-content">
-      <h1>Welcome to <strong>Timelion</strong>!</h1>
+      <h1>欢迎来到 <strong>Timelion</strong>!</h1>
       <p>
         Timelion111111111111111111111111111111111111 is the clawing, gnashing, zebra killing, pluggable time
         series interface for <em>everything</em>. If your datastore can
@@ -23,20 +23,20 @@
         ng-click="opts.dontShowHelp()"
         class="btn btn-default btn-doc-prev"
       >
-        Don't show this again
+        不要再次显示
       </button>
       <button
         ng-click="page = page+1"
         class="btn btn-primary btn-doc-next"
       >
-        Next
+        下一个
       </button>
     </div>
   </div>
   <div ng-show="page === 2">
     <div ng-show="!es.valid">
       <div class="doc-container-content">
-        <h2>First time configuration</h2>
+        <h2>第一次配置</h2>
         <p>
           If you're using Logstash, you don't need to configure anything to
           start exploring your log data with Timelion. To search other
@@ -56,7 +56,7 @@
           ng-click="page = page-1"
           class="btn btn-primary btn-doc-prev"
         >
-          Previous
+          前一个
         </button>
         <span ng-show="es.invalidCount > 0 && !es.valid">
           Could not validate Elasticsearch settings:
@@ -67,7 +67,7 @@
           ng-click="recheckElasticsearch()"
           class="btn btn-success btn-doc-next"
         >
-          Validate Config
+          确认配置
         </button>
       </div>
     </div>
@@ -199,13 +199,13 @@
         ng-click="page = page-1"
         class="btn btn-primary btn-doc-prev"
       >
-        Previous
+        前一个
       </button>
       <button
         ng-click="page = page+1"
         class="btn btn-primary btn-doc-next"
       >
-        Next
+        下一个
       </button>
     </div>
   </div>
@@ -343,11 +343,11 @@
 </div>
 <div ng-show="section === 'functions'">
   <div class="kuiLocalDropdownTitle">
-    Function reference
+    函数参考
   </div>
   <div class="kuiLocalDropdownHelpText">
-    Click any function for more information. Just getting started?
-    <a ng-click="section = 'tutorial'">Check out the tutorial</a>.
+    单击任何函数获取更多信息。刚刚开始?
+    <a ng-click="section = 'tutorial'">检查教程</a>.
   </div>
   <div class="timelionFunctionsDropdownContent">
     <table class="table table-condensed table-bordered timelionFunctionsTable">
@@ -371,9 +371,9 @@
               ng-show="function.args.length > (function.chainable ? 1: 0)"
             >
               <thead>
-                <th>Argument Name</th>
-                <th>Accepted Types</th>
-                <th>Information</th>
+                <th>参数名称</th>
+                <th>接受的类型</th>
+                <th>信息</th>
               </thead>
               <tr
                 ng-repeat="arg in function.args"

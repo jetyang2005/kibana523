@@ -20,7 +20,7 @@ module.factory('SavedSheet', function (courier, config) {
 
       // default values that will get assigned if the doc is new
       defaults: {
-        title: 'New TimeLion Sheet',
+        title: '新TimeLion表',
         hits: 0,
         description: '',
         timelion_sheet: ['.es(*)'],

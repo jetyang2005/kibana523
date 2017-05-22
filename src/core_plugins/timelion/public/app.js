@@ -64,22 +64,22 @@ app.controller('timelion', function (
   var savedSheet = $route.current.locals.savedSheet;
 
   $scope.topNavMenu = [{
-    key: 'new',
+    key: '新建',
     description: 'New Sheet',
     run: function () { kbnUrl.change('/'); },
     testId: 'timelionNewButton',
   }, {
-    key: 'add',
+    key: '添加',
     description: 'Add a chart',
     run: function () { $scope.newCell(); },
     testId: 'timelionAddChartButton',
   }, {
-    key: 'save',
+    key: '保存',
     description: 'Save Sheet',
     template: require('plugins/timelion/partials/save_sheet.html'),
     testId: 'timelionSaveButton',
   }, {
-    key: 'delete',
+    key: '删除',
     description: 'Delete current sheet',
     disableButton: function () {
       return !savedSheet.id;
@@ -94,17 +94,17 @@ app.controller('timelion', function (
       });},
     testId: 'timelionDeleteButton',
   }, {
-    key: 'open',
+    key: '打开',
     description: 'Open Sheet',
     template: require('plugins/timelion/partials/load_sheet.html'),
     testId: 'timelionOpenButton',
   }, {
-    key: 'options',
+    key: '选项',
     description: 'Options',
     template: require('plugins/timelion/partials/sheet_options.html'),
     testId: 'timelionOptionsButton',
   }, {
-    key: 'docs',
+    key: '文档',
     description: 'Documentation',
     template: '<timelion-docs></timelion-docs>',
     testId: 'timelionDocsButton',
