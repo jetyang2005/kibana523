@@ -24,14 +24,14 @@
         <!-- Header -->
         <div class="kuiLocalDropdownHeader">
           <div class="kuiLocalDropdownHeader__label">
-            Embedded iframe
+            嵌入的iframe
           </div>
           <div class="kuiLocalDropdownHeader__actions">
             <a
               class="kuiLocalDropdownHeader__action"
               ng-click="share.copyToClipboard('#originalIframeUrl')"
             >
-              Copy
+              复制
             </a>
           </div>
         </div>
@@ -56,14 +56,14 @@
         <!-- Header -->
         <div class="kuiLocalDropdownHeader">
           <div class="kuiLocalDropdownHeader__label">
-            Link
+            链接
           </div>
           <div class="kuiLocalDropdownHeader__actions">
             <a
               class="kuiLocalDropdownHeader__action"
               ng-click="share.copyToClipboard('#originalUrl')"
             >
-              Copy
+              复制
             </a>
           </div>
         </div>
@@ -97,7 +97,7 @@
       <!-- Header -->
       <div class="kuiLocalDropdownHeader">
         <div class="kuiLocalDropdownHeader__label">
-          Embedded iframe
+          嵌入的iframe
         </div>
         <div class="kuiLocalDropdownHeader__actions">
           <a
@@ -105,7 +105,7 @@
             ng-if="!share.urlFlags.shortSnapshotIframe"
             ng-click="share.toggleShortSnapshotIframeUrl()"
           >
-            Short URL
+            短链接
           </a>
 
           <a
@@ -113,14 +113,14 @@
             ng-if="share.urlFlags.shortSnapshotIframe"
             ng-click="share.toggleShortSnapshotIframeUrl()"
           >
-            Long URL
+            长链接
           </a>
 
           <a
             class="kuiLocalDropdownHeader__action"
             ng-click="share.copyToClipboard('#snapshotIframeUrl')"
           >
-            Copy
+            复制
           </a>
         </div>
       </div>

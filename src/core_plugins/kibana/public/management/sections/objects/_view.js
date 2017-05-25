@@ -21,7 +21,6 @@ uiModules.get('apps/management')
       const castMappingType = Private(IndexPatternsCastMappingTypeProvider);
       const serviceObj = registry.get($routeParams.service);
       const service = $injector.get(serviceObj.service);
-      console.log("_view==>serviceObj======"+JSON.stringify(serviceObj));
       /**
        * Creates a field definition and pushes it to the memo stack. This function
        * is designed to be used in conjunction with _.reduce(). If the

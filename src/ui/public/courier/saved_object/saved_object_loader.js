@@ -21,7 +21,6 @@ export class SavedObjectLoader {
       noun: StringUtils.upperFirst(this.type),
       nouns: `${ this.lowercaseType }s`,
     };
-    console.log('this.loaderProperties-------'+JSON.stringify(this.loaderProperties));
   }
 
   /**

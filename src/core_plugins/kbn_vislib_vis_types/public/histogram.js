@@ -8,7 +8,7 @@ export default function HistogramVisType(Private) {
 
   return new VislibVisType({
     name: 'histogram',
-    title: '垂直条形图',
+    title: '柱状图',
     icon: 'fa-bar-chart',
     description: 'The goto chart for oh-so-many needs. Great for time and non-time data. Stacked or grouped, ' +
     'exact numbers or percentages. If you are not sure which chart you need, you could do worse than to start here.',

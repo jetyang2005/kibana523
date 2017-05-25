@@ -14,12 +14,12 @@ export default function GetFieldTypes() {
 
     return [
       {
-        title: '领域',
+        title: '字段集',
         index: 'indexedFields',
         count: fieldCount.indexed
       },
       {
-        title: '脚本领域',
+        title: '脚本字段',
         index: 'scriptedFields',
         count: fieldCount.scripted
       },
