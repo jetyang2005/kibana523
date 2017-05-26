@@ -12,7 +12,7 @@ const module = uiModules.get('discover/saved_searches', [
 // edited by the object editor.
 require('plugins/kibana/management/saved_object_registry').register({
   service: 'savedSearches',
-  title: '搜索'
+  title: 'searches'
 });
 
 module.service('savedSearches', function (Promise, config, kbnIndex, esAdmin, createNotifier, SavedSearch, kbnUrl) {

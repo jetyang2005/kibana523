@@ -12,7 +12,7 @@ import { SavedObjectLoader } from 'ui/courier/saved_object/saved_object_loader';
 // edited by the object editor.
 require('plugins/kibana/management/saved_object_registry').register({
   service: 'savedDashboards',
-  title: '仪表板'
+  title: 'dashboards'
 });
 
 // This is the only thing that gets injected into controllers
