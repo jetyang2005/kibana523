@@ -5,6 +5,7 @@ import 'plugins/kibana/visualize/editor/agg_filter';
 import 'ui/visualize';
 import 'ui/collapsible_sidebar';
 import 'ui/share';
+import 'ui/fields_table';
 import angular from 'angular';
 import Notifier from 'ui/notify/notifier';
 import RegistryVisTypesProvider from 'ui/registry/vis_types';
@@ -32,6 +33,17 @@ uiRoutes
       .catch(courier.redirectWhenMissing({
         '*': '/visualize'
       }));
+    },
+    saveIndexParameters :function(courier, $route){
+
+      const indexPatternVis = courier.indexPatterns
+        .get($route.current.params.indexPattern)
+        .catch(courier.redirectWhenMissing('/management/kibana/index'));
+
+      indexPatternVis.then(function(result) {
+        return result;
+      });
+      return indexPatternVis;
     }
   }
 })
@@ -121,6 +133,11 @@ function VisEditor($scope, $route, timefilter, AppState, $location, kbnUrl, $tim
     description: 'Share Visualization',
     template: require('plugins/kibana/visualize/editor/panels/share.html'),
     testId: 'visualizeShareButton',
+  }, {
+    key: '字段',
+    description: 'Fields Table Visualization',
+    template: require('plugins/kibana/visualize/editor/panels/fields_table.html'),
+    testId: 'visualizeFieldsTableButton',
   }, {
     key: '刷新',
     description: 'Refresh',
