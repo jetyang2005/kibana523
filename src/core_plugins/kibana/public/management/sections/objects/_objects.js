@@ -42,6 +42,7 @@ uiModules.get('apps/management')
               service: service,
               serviceName: obj.service,
               title: obj.title,
+              label:obj.label,
               type: service.type,
               data: data.hits,
               total: data.total

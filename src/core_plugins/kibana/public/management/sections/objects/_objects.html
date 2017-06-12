@@ -47,7 +47,7 @@
           title="{{ service.title }}"
           ng-click="changeTab(service)"
         >
-          {{ service.title }}
+          {{ service.label || service.title }}
           <small>
           ({{service.data.length}}<span ng-show="service.total > service.data.length"> of {{service.total}}</span>)
           </small>
@@ -109,7 +109,7 @@
       <!-- NoResults -->
       <div class="kuiPanel kuiPanel--centered" ng-if="!service.data.length">
         <div class="kuiNoItems">
-          没有 {{service.title}} 匹配的搜索.
+          没有{{ service.label || service.title}}匹配的搜索.
         </div>
       </div>
 
