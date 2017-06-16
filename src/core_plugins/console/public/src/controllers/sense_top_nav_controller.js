@@ -6,25 +6,29 @@ export function SenseTopNavController(Private) {
 
   const controller = new KbnTopNavController([
     {
-      key: '欢迎',
+      key: 'welcome',
+      label:'欢迎',
       hideButton: true,
       template: `<sense-welcome></sense-welcome>`,
       testId: 'consoleWelcomeButton',
     },
     {
-      key: '历史',
+      key: 'history',
+      label:'历史',
       description: 'History',
       template: `<sense-history></sense-history>`,
       testId: 'consoleHistoryButton',
     },
     {
-      key: '设置',
+      key: 'settings',
+      label:'设置',
       description: 'Settings',
       template: `<sense-settings></sense-settings>`,
       testId: 'consoleSettingsButton',
     },
     {
-      key: '帮助',
+      key: 'help',
+      label:'帮助',
       description: 'Help',
       template: `<sense-help></sense-help>`,
       testId: 'consoleHelpButton',
