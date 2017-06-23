@@ -56,7 +56,8 @@
 
   <div ng-show="!state.panels.length" class="text-center start-screen">
     <h2>准备开始?</h2>
-    <p>Click the <a class="btn btn-xs navbtn-inverse" ng-click="kbnTopNav.open('add'); toggleAddVisualization = !toggleAddVisualization" aria-label="Add visualization">Add</a> button in the menu bar above to add a visualization to the dashboard. <br/>If you haven't setup a visualization yet visit the <a href="#/visualize" title="Visualize">"Visualize"</a> tab to create your first visualization.</p>
+    <!--<p>点击菜单上的 <a class="btn btn-xs navbtn-inverse" ng-click="kbnTopNav.open('add'); toggleAddVisualization = !toggleAddVisualization" aria-label="Add visualization">添加</a> 按钮可以将报表添加到仪表盘中， <br/>如果现在还没有报表，那么点击 <a href="#/visualize" title="Visualize">"报表分析"</a> 功能来添加一张报表.</p>-->
+    <p>点击菜单上的 <a class="btn btn-xs navbtn-inverse"  aria-label="Add visualization">添加</a> 按钮可以将报表添加到仪表盘中， <br/>如果现在还没有报表，那么点击 <a href="#/visualize" title="Visualize">"报表分析"</a> 功能来添加一张报表.</p>
   </div>
 
   <dashboard-grid ng-if="!hasExpandedPanel()"></dashboard-grid>

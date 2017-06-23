@@ -19,9 +19,8 @@ function MetricVisProvider(Private) {
   // Vis object of this type.
   return new TemplateVisType({
     name: 'metric',
-    title: '度量',
-    description: 'One big number for all of your one big number needs. Perfect for showing ' +
-      'a count of hits, or the exact average of a numeric field.',
+    title: '04-度量',
+    description: '用于在仪表盘上显示一个大的数字，这个数字可能是一组数字的平均值或者是数据条数的统计。',
     icon: 'fa-calculator',
     template: metricVisTemplate,
     params: {
@@ -36,7 +35,7 @@ function MetricVisProvider(Private) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Metric',
+        title: '度量',
         min: 1,
         defaults: [
           { type: 'count', schema: 'metric' }

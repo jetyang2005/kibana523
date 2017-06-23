@@ -8,3 +8,9 @@ uiModules
       return words(str).map(capitalize).join(' ');
     };
   });
+
+  //saved_object_finder.js 汉化使用
+  function labelFilter(str){
+    return words(str).map(capitalize).join(' ');
+  }
+  export default labelFilter;

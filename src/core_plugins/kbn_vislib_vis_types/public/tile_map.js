@@ -13,10 +13,9 @@ export default function TileMapVisType(Private, getAppState, courier, config) {
 
   return new MapsVisType({
     name: 'tile_map',
-    title: '地理位置图',
+    title: '10-地理位置图',
     icon: 'fa-map-marker',
-    description: 'Your source for geographic maps. Requires an elasticsearch geo_point field. More specifically, a field ' +
-     'that is mapped as type:geo_point with latitude and longitude coordinates.',
+    description: '地理位置图根据经纬度坐标在地图上显示地理位置。',
     params: {
       defaults: {
         mapType: 'Scaled Circle Markers',
@@ -86,7 +85,7 @@ export default function TileMapVisType(Private, getAppState, courier, config) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Value',
+        title: '值',
         min: 1,
         max: 1,
         aggFilter: ['count', 'avg', 'sum', 'min', 'max', 'cardinality'],
@@ -97,7 +96,7 @@ export default function TileMapVisType(Private, getAppState, courier, config) {
       {
         group: 'buckets',
         name: 'segment',
-        title: 'Geo Coordinates',
+        title: '地理坐标',
         aggFilter: 'geohash_grid',
         min: 1,
         max: 1

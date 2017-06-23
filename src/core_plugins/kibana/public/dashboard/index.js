@@ -294,6 +294,7 @@ app.directive('dashboardApp', function (Notifier, courier, AppState, timefilter,
       // Setup configurable values for config directive, after objects are initialized
       $scope.opts = {
         dashboard: dash,
+        label:'仪表盘',
         ui: $state.options,
         save: $scope.save,
         addVis: $scope.addVis,

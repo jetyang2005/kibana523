@@ -33,7 +33,7 @@ uiModules
       id: opts.id,
       indexPattern: opts.indexPattern,
       defaults: {
-        title: 'New Visualization',
+        title: '新的报表',
         visState: (function () {
           if (!opts.type) return null;
           const def = {};
@@ -51,6 +51,7 @@ uiModules
   }
 
   SavedVis.type = 'visualization';
+  SavedVis.label = '报表';
 
   SavedVis.mapping = {
     title: 'string',

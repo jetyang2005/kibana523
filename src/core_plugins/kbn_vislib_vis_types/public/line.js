@@ -8,10 +8,9 @@ export default function HistogramVisType(Private) {
 
   return new VislibVisType({
     name: 'line',
-    title: '折线图',
+    title: '02-折线图',
     icon: 'fa-line-chart',
-    description: 'Often the best chart for high density time series. Great for comparing one series to another. ' +
-      'Be careful with sparse sets as the connection between points can be misleading.',
+    description: '折线图是用折线将各个数据点标志连接起来的图表，用于展现数据的变化趋势，非常适合两组数据进行比较的场景。',
     params: {
       defaults: {
         addTooltip: true,
@@ -58,7 +57,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Y-Axis',
+        title: 'Y-轴',
         min: 1,
         defaults: [
           { schema: 'metric', type: 'count' }
@@ -67,7 +66,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'metrics',
         name: 'radius',
-        title: 'Dot Size',
+        title: '圆点大小',
         min: 0,
         max: 1,
         aggFilter: ['count', 'avg', 'sum', 'min', 'max', 'cardinality']
@@ -75,7 +74,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'segment',
-        title: 'X-Axis',
+        title: 'X-轴',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -83,7 +82,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'group',
-        title: 'Split Lines',
+        title: '分割线',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -91,7 +90,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'split',
-        title: 'Split Chart',
+        title: '分割图',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'

@@ -20,7 +20,7 @@ module.factory('SavedDashboard', function (courier, config) {
 
       // default values that will get assigned if the doc is new
       defaults: {
-        title: 'New Dashboard',
+        title: '新的仪表盘',
         hits: 0,
         description: '',
         panelsJSON: '[]',
@@ -43,6 +43,7 @@ module.factory('SavedDashboard', function (courier, config) {
 
   // save these objects with the 'dashboard' type
   SavedDashboard.type = 'dashboard';
+  SavedDashboard.label = '仪表盘';
 
   // if type:dashboard has no mapping, we push this mapping into ES
   SavedDashboard.mapping = {

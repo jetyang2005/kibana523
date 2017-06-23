@@ -2,17 +2,17 @@
   <div class="vis-option-item" ng-show="vis.hasSchemaAgg('segment', 'date_histogram')">
     <label>
       <input type="checkbox" ng-model="vis.params.addTimeMarker" ng-checked="vis.params.addTimeMarker">
-      Current time marker
+      当前时间标记
     </label>
   </div>
   <div class="vis-option-item">
     <label>
       <input type="checkbox" ng-model="vis.params.setYExtents">
-      Set Y-Axis Extents
+      设置Y轴范围
     </label>
     <div ng-if="vis.params.setYExtents">
       <label>
-        y-max
+        y-最大值
         <input name="yMax"
                class="form-control"
                type="number"
@@ -25,7 +25,7 @@
         <span class="text-danger">Max must be greater than min</span>
       </div>
       <label>
-        y-min
+        y-最小值
         <input name="yMin"
                class="form-control"
                type="number"
@@ -37,18 +37,18 @@
       </label>
     </div>
     <div ng-show="vis.params.setYExtents && vis.params.scale === 'log' && vis.params.yAxis.min <= 0">
-      <span class="text-danger">Min must exceed 0 when a log scale is selected</span>
+      <span class="text-danger">当选择对数刻度时，最小值必须超过0</span>
     </div>
     <div class="vis-option-item">
       <label>
         <input type="checkbox" ng-model="vis.params.defaultYExtents" ng-disabled="vis.params.setYExtents">
-        Scale Y-Axis to Data Bounds
+        将Y轴缩放到数据边界
       </label>
     </div>
     <div class="vis-option-item">
       <label>
         <input type="checkbox" ng-model="vis.params.orderBucketsBySum">
-        Order buckets by descending sum
+        按降序排列分组
       </label>
     </div>
   </div>

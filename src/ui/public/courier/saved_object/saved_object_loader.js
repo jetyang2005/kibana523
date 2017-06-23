@@ -20,6 +20,7 @@ export class SavedObjectLoader {
       name: `${ this.lowercaseType }s`,
       noun: StringUtils.upperFirst(this.type),
       nouns: `${ this.lowercaseType }s`,
+      label: SavedObjectClass.label
     };
   }
 

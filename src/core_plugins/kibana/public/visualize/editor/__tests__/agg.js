@@ -20,7 +20,7 @@ describe('Vis-Editor-Agg plugin directive', function () {
         max: 1
       },
       metric: {
-        title: 'Y-Axis',
+        title: 'Y-轴',
         min: 1,
         max: Infinity
       }

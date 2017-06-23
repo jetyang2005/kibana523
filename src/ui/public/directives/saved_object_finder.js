@@ -4,6 +4,7 @@ import keymap from 'ui/utils/key_map';
 import SavedObjectsSavedObjectRegistryProvider from 'ui/saved_objects/saved_object_registry';
 import uiModules from 'ui/modules';
 import savedObjectFinderTemplate from 'ui/partials/saved_object_finder.html';
+import labelFilter from 'ui/filters/label';
 let module = uiModules.get('kibana');
 
 module.directive('savedObjectFinder', function ($location, $injector, kbnUrl, Private, config) {
@@ -47,7 +48,7 @@ module.directive('savedObjectFinder', function ($location, $injector, kbnUrl, Pr
 
       self.service = services[$scope.type];
       self.properties = self.service.loaderProperties;
-
+      self.properties.labelOrNouns = self.properties.label ? self.properties.label : labelFilter(self.properties.nouns);
       filterResults();
 
       /**

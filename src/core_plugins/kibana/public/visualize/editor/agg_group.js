@@ -15,6 +15,7 @@ uiModules
     scope: true,
     link: function ($scope, $el, attr) {
       $scope.groupName = attr.groupName;
+      $scope.groupLabel = attr.groupLabel;
       $scope.$bind('group', 'vis.aggs.bySchemaGroup["' + $scope.groupName + '"]');
       $scope.$bind('schemas', 'vis.type.schemas["' + $scope.groupName + '"]');
 

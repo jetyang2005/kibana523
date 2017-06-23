@@ -8,10 +8,9 @@ export default function HistogramVisType(Private) {
 
   return new VislibVisType({
     name: 'histogram',
-    title: '柱状图',
+    title: '01-柱状图',
     icon: 'fa-bar-chart',
-    description: 'The goto chart for oh-so-many needs. Great for time and non-time data. Stacked or grouped, ' +
-    'exact numbers or percentages. If you are not sure which chart you need, you could do worse than to start here.',
+    description: '柱状图主要用于表示不同类目数据间的大小，如果不确定用什么图形来显示你的数据，可以从柱状图这里来尝试下。' ,
     params: {
       defaults: {
         addTooltip: true,
@@ -46,7 +45,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Y-Axis',
+        title: 'Y-轴',
         min: 1,
         aggFilter: '!std_dev',
         defaults: [
@@ -56,7 +55,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'segment',
-        title: 'X-Axis',
+        title: 'X-轴',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -64,7 +63,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'group',
-        title: 'Split Bars',
+        title: '分割条',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -72,7 +71,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'split',
-        title: 'Split Chart',
+        title: '分割图',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'

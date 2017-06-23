@@ -23,6 +23,7 @@ app.directive('share', function (Private) {
     restrict: 'E',
     scope: {
       objectType: '@',
+      objectLabel: '@',
       objectId: '@',
       allowEmbed: '@',
     },
@@ -36,6 +37,7 @@ app.directive('share', function (Private) {
       // Default to allowing an embedded IFRAME, unless it's explicitly set to false.
       this.allowEmbed = $scope.allowEmbed === 'false' ? false : true;
       this.objectType = $scope.objectType;
+      this.objectLabel = $scope.objectLabel;
 
       function getOriginalUrl() {
         // If there is no objectId, then it isn't saved, so it has no original URL.

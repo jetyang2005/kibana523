@@ -16,10 +16,9 @@ define(function (require) {
     // Vis object of this type.
     return new TemplateVisType({
       name: 'timelion',
-      title: '时序图',
+      title: '05-时序图',
       icon: 'fa-clock-o',
-      description: 'Create timeseries charts using the timelion expression language. ' +
-        'Perfect for computing and combining timeseries sets with functions such as derivatives and moving averages',
+      description: '用时序表达式语言创建时序图，随着时间变化展示数据的平均值或者数据偏移变化情况。',
       template: require('plugins/timelion/vis/timelion_vis.html'),
       params: {
         editor: require('plugins/timelion/vis/timelion_vis_params.html')

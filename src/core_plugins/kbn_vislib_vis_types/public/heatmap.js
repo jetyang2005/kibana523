@@ -9,10 +9,9 @@ export default function HeatmapVisType(Private) {
 
   return new VislibVisType({
     name: 'heatmap',
-    title: '热力图',
+    title: '09-热力图',
     icon: 'fa-barcode',
-    description: 'A heat map is a graphical representation of data' +
-    ' where the individual values contained in a matrix are represented as colors. ',
+    description: '热力图主要通过颜色去表现数值的大小。',
     params: {
       defaults: {
         addTooltip: true,
@@ -62,7 +61,7 @@ export default function HeatmapVisType(Private) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Value',
+        title: '值',
         min: 1,
         max: 1,
         aggFilter: ['count', 'avg', 'median', 'sum', 'min', 'max', 'cardinality', 'std_dev'],
@@ -73,7 +72,7 @@ export default function HeatmapVisType(Private) {
       {
         group: 'buckets',
         name: 'segment',
-        title: 'X-Axis',
+        title: 'X-轴',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -81,7 +80,7 @@ export default function HeatmapVisType(Private) {
       {
         group: 'buckets',
         name: 'group',
-        title: 'Y-Axis',
+        title: 'Y-轴',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -89,7 +88,7 @@ export default function HeatmapVisType(Private) {
       {
         group: 'buckets',
         name: 'split',
-        title: 'Split Chart',
+        title: '分割图',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'

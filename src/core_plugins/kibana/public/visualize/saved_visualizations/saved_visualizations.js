@@ -11,7 +11,7 @@ const app = uiModules.get('app/visualize');
 require('plugins/kibana/management/saved_object_registry').register({
   service: 'savedVisualizations',
   title: 'visualizations',
-  label:'可视化'
+  label:'报表'
 });
 
 app.service('savedVisualizations', function (Promise, esAdmin, kbnIndex, SavedVis, Private, Notifier, kbnUrl) {

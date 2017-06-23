@@ -23,7 +23,8 @@ define(function (require) {
     savedSheetLoader.loaderProperties = {
       name: 'timelion-sheet',
       noun: 'Saved Sheets',
-      nouns: 'saved sheets'
+      nouns: 'saved sheets',
+      label: '已保存的搜索'
     };
     return savedSheetLoader;
   });

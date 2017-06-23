@@ -8,12 +8,9 @@ export default function HistogramVisType(Private) {
 
   return new VislibVisType({
     name: 'area',
-    title: '区域图',
+    title: '07-面积图',
     icon: 'fa-area-chart',
-    description: 'Great for stacked timelines in which the total of all series is more important ' +
-      'than comparing any two or more series. Less useful for assessing the relative change of ' +
-      'unrelated data points as changes in a series lower down the stack will have a difficult to gauge ' +
-      'effect on the series above it.',
+    description: '面积图强调数量随时间而变化的程度，也可用于引起人们对总值趋势的注意。',
     params: {
       defaults: {
         addTooltip: true,
@@ -59,7 +56,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'metrics',
         name: 'metric',
-        title: 'Y-Axis',
+        title: 'Y轴',
         min: 1,
         aggFilter: '!std_dev',
         defaults: [
@@ -69,7 +66,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'segment',
-        title: 'X-Axis',
+        title: 'X轴',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -77,7 +74,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'group',
-        title: 'Split Area',
+        title: '分割区域',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'
@@ -85,7 +82,7 @@ export default function HistogramVisType(Private) {
       {
         group: 'buckets',
         name: 'split',
-        title: 'Split Chart',
+        title: '分割图表',
         min: 0,
         max: 1,
         aggFilter: '!geohash_grid'

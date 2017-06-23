@@ -1,7 +1,7 @@
 <div>
   <div class="kuiSideBarFormRow">
     <label class="kuiSideBarFormRow__label" for="colorSchema">
-      Color Schema
+      颜色模式
     </label>
     <div class="kuiSideBarFormRow__control">
       <select
@@ -16,7 +16,7 @@
 
   <div class="kuiSideBarFormRow">
     <label class="kuiSideBarFormRow__label" for="invertColors">
-      Reverse Color Schema
+      反色模式
     </label>
     <div class="kuiSideBarFormRow__control">
       <input class="kuiCheckBox" id="invertColors" type="checkbox" ng-model="vis.params.invertColors">
@@ -25,7 +25,7 @@
 
   <div class="kuiSideBarFormRow">
     <label class="kuiSideBarFormRow__label" for="axisScale">
-      Color Scale
+      色彩范围
     </label>
     <div class="kuiSideBarFormRow__control">
       <select
@@ -39,7 +39,7 @@
 
   <div class="kuiSideBarFormRow">
     <label class="kuiSideBarFormRow__label" for="defaultYExtents">
-      Scale to Data Bounds
+      表的数据范围
     </label>
     <div class="kuiSideBarFormRow__control">
       <input class="kuiCheckBox" id="defaultYExtents" type="checkbox" ng-model="valueAxis.scale.defaultYExtents">
@@ -48,7 +48,7 @@
 
   <div class="kuiSideBarFormRow" ng-if="!vis.params.setColorRange">
     <label class="kuiSideBarFormRow__label" for="percentageMode">
-      Percentage Mode
+      比例模式
     </label>
     <div class="kuiSideBarFormRow__control">
       <input class="kuiCheckBox" id="percentageMode" type="checkbox" ng-model="vis.params.percentageMode">
@@ -57,7 +57,7 @@
 
   <div class="kuiSideBarFormRow" ng-if="!vis.params.setColorRange">
     <label class="kuiSideBarFormRow__label" for="colorsNumber">
-      Number of colors
+      颜色数量
     </label>
     <div class="kuiSideBarFormRow__control">
       <input
@@ -83,7 +83,7 @@
           class="fa fa-caret-right kuiSideBarCollapsibleTitle__caret"
         ></span>
         <span class="kuiSideBarCollapsibleTitle__text">
-          Custom Ranges
+          自定义范围
         </span>
       </div>
       <input aria-label="enable"
@@ -99,10 +99,10 @@
         <table class="vis-editor-agg-editor-ranges form-group" ng-show="vis.params.colorsRange.length">
           <tr>
             <th>
-              <label>From</label>
+              <label>从</label>
             </th>
             <th colspan="2">
-              <label>To</label>
+              <label>到</label>
             </th>
           </tr>
 
@@ -139,16 +139,16 @@
         <div class="hintbox" ng-show="!vis.params.colorsRange.length">
           <p>
             <i class="fa fa-danger text-danger"></i>
-            <strong>Required:</strong> You must specify at least one range.
+            <strong>要求:</strong> 您必须指定至少一个范围.
           </p>
         </div>
 
         <div
           ng-click="addRange()"
           class="sidebar-item-button primary">
-          Add Range
+          添加范围
         </div>
-        <div class="text text-center text-info">Note: colors can be changed in the legend</div>
+        <div class="text text-center text-info">注意：颜色可以在图例中更改</div>
       </div>
     </div>
   </div>
@@ -167,7 +167,7 @@
           class="fa fa-caret-right kuiSideBarCollapsibleTitle__caret"
         ></span>
         <span class="kuiSideBarCollapsibleTitle__text">
-          Show Labels
+          显示标签
         </span>
       </div>
       <input aria-label="enable"
@@ -180,7 +180,7 @@
       <div class="kuiSideBarSection">
         <div class="kuiSideBarFormRow">
           <label class="kuiSideBarFormRow__label" for="rotateLabels">
-            Rotate
+            旋转
           </label>
           <div class="kuiSideBarFormRow__control">
             <input class="kuiCheckBox" id="rotateLabels" type="checkbox" ng-model="options.rotateLabels">
@@ -189,7 +189,7 @@
 
         <div class="kuiSideBarFormRow">
           <label class="kuiSideBarFormRow__label" for="labelColor">
-            Color
+            颜色
           </label>
           <div class="kuiSideBarFormRow__control">
             <input

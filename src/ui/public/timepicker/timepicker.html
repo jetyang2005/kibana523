@@ -9,13 +9,13 @@
         <div class="col-md-2">
           <ul class="nav nav-pills nav-stacked kbn-timepicker-modes">
             <li ng-class="{active: mode === 'quick' }">
-              <a ng-click="setMode('quick')">quick</a>
+              <a ng-click="setMode('quick')">快速</a>
             </li>
             <li ng-class="{active: mode === 'relative' }">
-              <a ng-click="setMode('relative')">relative</a>
+              <a ng-click="setMode('relative')">相对</a>
             </li>
             <li ng-class="{active: mode === 'absolute' }">
-              <a ng-click="setMode('absolute')">absolute</a>
+              <a ng-click="setMode('absolute')">绝对</a>
             </li>
           </ul>
         </div>
@@ -39,7 +39,7 @@
               <form role="form" ng-submit="applyRelative()" class="form-inline" name="relativeTime">
                 <div class="kbn-timepicker-section">
                   <label>
-                    From:
+                    从:
                     <span ng-show="relative.preview">{{relative.preview}}</span>
                     <span ng-hide="relative.preview"><i>Invalid Expression</i></span>
                   </label>
@@ -77,11 +77,11 @@
 
                 <div class="kbn-timepicker-section">
                   <label>
-                    To: Now
+                    到: 现在
                   </label>
                   <br>
                   <div class="form-group">
-                    <input type="text" disabled class="form-control" value="Now">
+                    <input type="text" disabled class="form-control" value="现在">
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@
               <form name="absoluteTime" ng-submit="applyAbsolute()">
                 <div class="kbn-timepicker-section">
                   <div>
-                    <label class="small">From: <span ng-show="!absolute.from"><i>Invalid Date</i></span>
+                    <label class="small">从: <span ng-show="!absolute.from"><i>Invalid Date</i></span>
                     </label>
                     <input type="text" required class="form-control" input-datetime="{{format}}" ng-model="absolute.from">
                   </div>
@@ -112,8 +112,8 @@
 
                 <div class="kbn-timepicker-section">
                   <div>
-                    <label class="small">To:
-                      <a class="label label-default" ng-click="setToNow()">Set To Now</a>
+                    <label class="small">到:
+                      <a class="label label-default" ng-click="setToNow()">设置到现在</a>
                     </label>
                     <span ng-show="!absolute.to"><i>Invalid Date</i></span>
                     <input type="text" required class="form-control" input-datetime="{{format}}" ng-model="absolute.to">
