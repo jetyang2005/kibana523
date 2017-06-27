@@ -3,9 +3,7 @@
     <div ng-controller="managementIndicesCreate" class="kbn-management-indices-create">
       <div class="page-header">
         <h1>配置索引模式</h1>
-        In order to use Kibana you must configure at least one index pattern. Index patterns are
-        used to identify the Elasticsearch index to run search and analytics against. They are also
-        used to configure fields.
+        在使用数据分析相关功能之前，必须在这里配置索引，索引相当于关系型数据库中的数据库.
       </div>
       <div>
         <form name="form" role="form" class="well" ng-submit="createIndexPattern()">
@@ -14,13 +12,13 @@
               <input
                 ng-model="index.isTimeBased"
                 type="checkbox">
-              Index contains time-based events
+              包括时间戳字段的索引（默认）
             </label>
             <br>
-            <label ng-if="index.isTimeBased">
-              <input ng-model="index.nameIsPattern" type="checkbox">
-              Use event times to create index names <small>[DEPRECATED]</small>
-            </label>
+            <!--<label ng-if="index.isTimeBased">-->
+              <!--<input ng-model="index.nameIsPattern" type="checkbox">-->
+              <!--Use event times to create index names <small>[DEPRECATED]</small>-->
+            <!--</label>-->
           </div>
 
           <div class="form-group" ng-if="index.isTimeBased && index.nameIsPattern">
@@ -52,9 +50,9 @@
 
           <div class="form-group">
             <label>
-              Index name or pattern
+              索引名称或模式
             </label>
-            <p class="help-block" ng-if="!index.nameIsPattern">Patterns allow you to define dynamic index names using * as a wildcard. Example: logstash-*</p>
+            <p class="help-block" ng-if="!index.nameIsPattern">模式允许定义通配符形式的索引，例如：1009-process*</p>
             <p class="help-block" ng-if="index.isTimeBased && index.nameIsPattern">Patterns allow you to define dynamic index names. Static text in an index name is denoted using brackets. Example: [logstash-]YYYY.MM.DD. Please note that weeks are setup to use ISO weeks which start on Monday. &mdash;
               <small><a target="_blank" href="http://momentjs.com/docs/#/displaying/format/">Date Format Documentation</a></small></p>
             <input
@@ -77,7 +75,7 @@
           <div class="form-group" ng-if="canExpandIndices()">
             <label>
               <input ng-model="index.notExpandable" type="checkbox">
-              Do not expand index pattern when searching <small>(Not recommended)</small>
+              查询的时候不展开索引模式 <small>(不推荐)</small>
             </label>
 
             <div ng-if="index.notExpandable" class="alert alert-info">
@@ -90,17 +88,11 @@
             </div>
 
             <p class="help-block">
-              By default, searches against any time-based index pattern that
-              contains a wildcard will automatically be expanded to query only
-              the indices that contain data within the currently selected time
-              range.
+              缺省情况下，查询带通配符形式的索引会自动展开对符合通配符要求的时间范围内的全部数据进行查询.
             </p>
 
             <p class="help-block">
-              Searching against the index pattern <em>logstash-*</em> will
-              actually query elasticsearch for the specific matching indices
-              (e.g. <em>logstash-2015.12.21</em>) that fall within the current
-              time range.
+              当查询索引 <em>1009-process*</em> 索引时，索引(<em>1009-process-20160615</em>) 这个索引的数据也在查询范围内.
             </p>
           </div>
 
@@ -149,12 +141,12 @@
 
           <div class="form-group" ng-if="index.isTimeBased && !index.fetchFieldsError">
             <label>
-              Time-field name
+              时间戳字段
               &nbsp;
               <kbn-info info="This field will be used to filter events with the global time filter"></kbn-info>
               &nbsp;
               <small>
-                <a ng-click="refreshFieldList();"> refresh fields</a>
+                <a ng-click="refreshFieldList();"> 刷新字段</a>
               </small>
             </label>
             <select
