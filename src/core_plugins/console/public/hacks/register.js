@@ -3,5 +3,6 @@ devTools.register(() => ({
   order: 1,
   name: 'console',
   display: 'Console',
+  label: '控制台',
   url: '#/dev_tools/console'
 }));

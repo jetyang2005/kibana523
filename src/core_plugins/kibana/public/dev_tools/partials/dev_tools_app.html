@@ -16,7 +16,8 @@
           ng-class="{'kuiLocalTab-isSelected': kbnDevToolsApp.currentPath === item.url}"
           kbn-href="{{::item.url}}"
         >
-          {{::item.display}}
+          <span ng-if="item.label">{{::item.label}}</span>
+          <span ng-if="!item.label">{{::item.display}}</span>
         </a>
       </div>
     </div>
