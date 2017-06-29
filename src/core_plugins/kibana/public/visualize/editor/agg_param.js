@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import uiModules from 'ui/modules';
+import labelFilter from 'ui/filters/label';
 
 uiModules
 .get('app/visualize')
@@ -13,6 +14,7 @@ uiModules
     link: {
       pre: function ($scope, $el, attr) {
         $scope.$bind('aggParam', attr.aggParam);
+        $scope.labelOrName = $scope.aggParam.label ? $scope.aggParam.label : labelFilter($scope.aggParam.name);
       },
       post: function ($scope, $el, attr) {
         $scope.config = config;

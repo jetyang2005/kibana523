@@ -102,6 +102,7 @@ export default function AggTypeFactory(Private) {
       if (config.customLabels !== false) {
         this.params.push({
           name: 'customLabel',
+          label:'自定义标签',
           type: 'string',
           write: _.noop
         });

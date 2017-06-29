@@ -4,7 +4,7 @@
     <div class="kuiViewContentItem kuiBar kuiVerticalRhythm">
       <div class="kuiBarSection">
         <h1 class="kuiTitle">
-          Edit {{ title }}
+          编辑{{ label || title }}
         </h1>
       </div>
 
@@ -14,7 +14,7 @@
           href="{{ link }}"
         >
           <span class="kuiButton__icon kuiIcon fa-eye"></span>
-          View {{ title }}
+          查看{{ label || title }}
         </a>
 
         <button
@@ -22,7 +22,7 @@
           confirm-click="delete()"
         >
           <span class="kuiButton__icon kuiIcon fa-trash-o"></span>
-          Delete {{ title }}
+          删除{{ label || title }}
         </button>
       </div>
     </div>
@@ -115,7 +115,7 @@
           ng-click="submit()"
           ng-disabled="objectForm.$invalid || aceInvalidEditors.length !==0"
         >
-          Save {{ title }} Object
+          保存{{ label || title }}对象
         </button>
 
         <button

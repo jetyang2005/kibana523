@@ -101,6 +101,7 @@ uiModules.get('apps/management')
 
       $scope.notFound = $routeParams.notFound;
 
+      $scope.label = service.loaderProperties.label;
       $scope.title = service.type;
 
       esAdmin.get({
