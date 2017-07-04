@@ -10,12 +10,12 @@
     </div>
 
     <!-- Help text -->
-    <div ng-if="share.urls.original" class="kuiLocalDropdownHelpText">
-      You can share this URL with people to let them load the most recent saved version of this {{share.objectType}}.
-    </div>
+    <!--<div ng-if="share.urls.original" class="kuiLocalDropdownHelpText">-->
+      <!--You can share this URL with people to let them load the most recent saved version of this {{share.objectType}}.-->
+    <!--</div>-->
 
     <div ng-if="!share.urls.original" class="kuiLocalDropdownWarning">
-      Please save this {{share.objectType}} to enable this sharing option.
+      请保存此{{ share.objectLabel || share.objectType}}以启用此共享选项.
     </div>
 
     <div ng-if="share.urls.original">
@@ -46,9 +46,9 @@
         />
 
         <!-- Notes -->
-        <div class="kuiLocalDropdownFormNote">
-          Add to your HTML source. Note that all clients must be able to access Kibana.
-        </div>
+        <!--<div class="kuiLocalDropdownFormNote">-->
+          <!--Add to your HTML source. Note that all clients must be able to access Kibana.-->
+        <!--</div>-->
       </div>
 
       <!-- Link -->
@@ -88,9 +88,9 @@
     </div>
 
     <!-- Help text -->
-    <div class="kuiLocalDropdownHelpText">
-      Snapshot URLs encode the current state of the {{share.objectType}} in the URL itself. Edits to the saved {{share.objectType}} won't be visible via this URL.
-    </div>
+    <!--<div class="kuiLocalDropdownHelpText">-->
+      <!--Snapshot URLs encode the current state of the {{share.objectType}} in the URL itself. Edits to the saved {{share.objectType}} won't be visible via this URL.-->
+    <!--</div>-->
 
     <!-- iframe -->
     <div class="kuiLocalDropdownSection" ng-if="share.allowEmbed">
@@ -135,9 +135,9 @@
       />
 
       <!-- Notes -->
-      <div class="kuiLocalDropdownFormNote">
-        Add to your HTML source. Note that all clients must be able to access Kibana.
-      </div>
+      <!--<div class="kuiLocalDropdownFormNote">-->
+        <!--Add to your HTML source. Note that all clients must be able to access Kibana.-->
+      <!--</div>-->
     </div>
 
     <!-- Link -->
@@ -186,9 +186,9 @@
       />
 
       <!-- Notes -->
-      <div class="kuiLocalDropdownFormNote">
-        We recommend sharing shortened snapshot URLs for maximum compatibility. Internet Explorer has URL length restrictions, and some wiki and markup parsers don't do well with the full-length version of the snapshot URL, but the short URL should work great.
-      </div>
+      <!--<div class="kuiLocalDropdownFormNote">-->
+        <!--We recommend sharing shortened snapshot URLs for maximum compatibility. Internet Explorer has URL length restrictions, and some wiki and markup parsers don't do well with the full-length version of the snapshot URL, but the short URL should work great.-->
+      <!--</div>-->
     </div>
   </div>
 </div>
